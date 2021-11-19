@@ -1,1 +1,55 @@
-{}
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "Character Input",
+            "id": "cfda4fc3-d2e9-4a12-9b3b-538a5ea9d5e9",
+            "actions": [
+                {
+                    "name": "MovementX",
+                    "type": "Button",
+                    "id": "3951e7cf-c834-4e22-b079-d0a295e039be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Keys",
+                    "id": "b8ffb4e9-a391-4cf1-b6b2-ae62ca6c7ca8",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovementX",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "21272e58-89cd-4519-a0c5-f1e24ed8f6dc",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovementX",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "2c0ce34e-4205-4a28-9fc2-74cb504a729a",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovementX",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
