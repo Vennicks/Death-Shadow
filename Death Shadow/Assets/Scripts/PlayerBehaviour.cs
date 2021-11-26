@@ -1,15 +1,16 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public class PlayerBehaviour : MonoBehaviour
 {
     // Start is called before the first frame 
     private InputActions playerInputActions;
-
     private Rigidbody2D rb2d;
+
+    private Collider2D hitbox;
 
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpForce = 150f;
@@ -18,11 +19,13 @@ public class PlayerBehaviour : MonoBehaviour
     private int countJump = 0;
     private bool isJumping = false;
 
-
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
     int TotalDamages = 0;
+
+    private Transform GroundCheckRight;
+    private Transform GroundCheckLeft;
 
     void Start()
     {
@@ -41,6 +44,11 @@ public class PlayerBehaviour : MonoBehaviour
         playerInputActions.PlayerInput.Ability1.Enable();
         playerInputActions.PlayerInput.Ability2.started += (ctx) => UseSecondAbility();
         playerInputActions.PlayerInput.Ability2.Enable();
+
+        GroundCheckRight = transform.Find("GroundCheckRight");
+        GroundCheckLeft = transform.Find("GroundCheckLeft");
+
+        hitbox = gameObject.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -69,6 +77,15 @@ public class PlayerBehaviour : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
             floatJumpAction = 0f;
         }
+
+        checkIfGrounded();
+    }
+
+    void checkIfGrounded()
+    {
+        var collider = Physics2D.OverlapArea(GroundCheckLeft.position, GroundCheckRight.position);
+        if (collider)
+            Grounded(collider);
     }
 
     void TakeDamages()
@@ -92,13 +109,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     void UnlockJumping()
     {
-        if (isJumping && countJump < NbMaxJump)
+        if (isJumping && countJump < NbMaxJump-1)
         {
             isJumping = false;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    private void Grounded(Collider2D collision)
     {
         if (collision.gameObject.tag == "Platform")
         {
@@ -116,9 +133,22 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+    private static void StopAbility1(GameObject o)
+    {
+        o.layer = 6;
+    }
+
+    private async Task delayedWork()
+    {
+        await Task.Delay(5000);
+        gameObject.layer = 6;
+    }
+
     private void UseFirstAbility()
     {
         Debug.Log("Using First Ability");
+        gameObject.layer = 8;
+        delayedWork();
     }
 
     private void UseSecondAbility()
