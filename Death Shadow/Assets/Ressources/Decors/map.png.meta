@@ -2003,7 +2003,7 @@ TextureImporter:
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
-    mipMapMode: 0
+    mipMapMode: 1
     enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
@@ -2030,7 +2030,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -2041,10 +2041,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 625
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2067,7 +2067,7 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 0
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -2079,7 +2079,7 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 0
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
@@ -2093,9 +2093,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3500
-        width: 500
-        height: 500
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2113,10 +2113,10 @@ TextureImporter:
       name: map_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 3500
-        width: 500
-        height: 500
+        x: 625
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2134,10 +2134,10 @@ TextureImporter:
       name: map_2
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 3500
-        width: 500
-        height: 500
+        x: 1250
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2155,10 +2155,10 @@ TextureImporter:
       name: map_3
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 3500
-        width: 500
-        height: 500
+        x: 1875
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2176,10 +2176,10 @@ TextureImporter:
       name: map_4
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 3500
-        width: 500
-        height: 500
+        x: 2500
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2197,10 +2197,10 @@ TextureImporter:
       name: map_5
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 3500
-        width: 500
-        height: 500
+        x: 3125
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2218,10 +2218,10 @@ TextureImporter:
       name: map_6
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 3500
-        width: 500
-        height: 500
+        x: 3750
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2239,10 +2239,10 @@ TextureImporter:
       name: map_7
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 3500
-        width: 500
-        height: 500
+        x: 4375
+        y: 4375
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2261,9 +2261,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3000
-        width: 500
-        height: 500
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2281,10 +2281,10 @@ TextureImporter:
       name: map_9
       rect:
         serializedVersion: 2
-        x: 500
-        y: 3000
-        width: 500
-        height: 500
+        x: 625
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2302,10 +2302,10 @@ TextureImporter:
       name: map_10
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 3000
-        width: 500
-        height: 500
+        x: 1250
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2323,10 +2323,10 @@ TextureImporter:
       name: map_11
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 3000
-        width: 500
-        height: 500
+        x: 1875
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2344,10 +2344,10 @@ TextureImporter:
       name: map_12
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 3000
-        width: 500
-        height: 500
+        x: 2500
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2365,10 +2365,10 @@ TextureImporter:
       name: map_13
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 3000
-        width: 500
-        height: 500
+        x: 3125
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2386,10 +2386,10 @@ TextureImporter:
       name: map_14
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 3000
-        width: 500
-        height: 500
+        x: 3750
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2407,10 +2407,10 @@ TextureImporter:
       name: map_15
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 3000
-        width: 500
-        height: 500
+        x: 4375
+        y: 3750
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2429,9 +2429,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2500
-        width: 500
-        height: 500
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2449,10 +2449,10 @@ TextureImporter:
       name: map_17
       rect:
         serializedVersion: 2
-        x: 500
-        y: 2500
-        width: 500
-        height: 500
+        x: 625
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2470,10 +2470,10 @@ TextureImporter:
       name: map_18
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 2500
-        width: 500
-        height: 500
+        x: 1250
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2491,10 +2491,10 @@ TextureImporter:
       name: map_19
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 2500
-        width: 500
-        height: 500
+        x: 1875
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2512,10 +2512,10 @@ TextureImporter:
       name: map_20
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 2500
-        width: 500
-        height: 500
+        x: 2500
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2533,10 +2533,10 @@ TextureImporter:
       name: map_21
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 2500
-        width: 500
-        height: 500
+        x: 3125
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2554,10 +2554,10 @@ TextureImporter:
       name: map_22
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 2500
-        width: 500
-        height: 500
+        x: 3750
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2575,10 +2575,10 @@ TextureImporter:
       name: map_23
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 2500
-        width: 500
-        height: 500
+        x: 4375
+        y: 3125
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2597,9 +2597,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
-        width: 500
-        height: 500
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2617,10 +2617,10 @@ TextureImporter:
       name: map_25
       rect:
         serializedVersion: 2
-        x: 500
-        y: 2000
-        width: 500
-        height: 500
+        x: 625
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2638,10 +2638,10 @@ TextureImporter:
       name: map_26
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 2000
-        width: 500
-        height: 500
+        x: 1250
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2659,10 +2659,10 @@ TextureImporter:
       name: map_27
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 2000
-        width: 500
-        height: 500
+        x: 1875
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2680,10 +2680,10 @@ TextureImporter:
       name: map_28
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 2000
-        width: 500
-        height: 500
+        x: 2500
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2701,10 +2701,10 @@ TextureImporter:
       name: map_29
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 2000
-        width: 500
-        height: 500
+        x: 3125
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2722,10 +2722,10 @@ TextureImporter:
       name: map_30
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 2000
-        width: 500
-        height: 500
+        x: 3750
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2743,10 +2743,10 @@ TextureImporter:
       name: map_31
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 2000
-        width: 500
-        height: 500
+        x: 4375
+        y: 2500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2764,10 +2764,10 @@ TextureImporter:
       name: map_32
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1500
-        width: 500
-        height: 500
+        x: 625
+        y: 1875
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2785,10 +2785,10 @@ TextureImporter:
       name: map_33
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1500
-        width: 500
-        height: 500
+        x: 2500
+        y: 1875
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2806,10 +2806,10 @@ TextureImporter:
       name: map_34
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 1500
-        width: 500
-        height: 500
+        x: 3125
+        y: 1875
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2827,10 +2827,10 @@ TextureImporter:
       name: map_35
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 1500
-        width: 500
-        height: 500
+        x: 3750
+        y: 1875
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2849,9 +2849,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1000
-        width: 500
-        height: 500
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2869,10 +2869,10 @@ TextureImporter:
       name: map_37
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1000
-        width: 500
-        height: 500
+        x: 625
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2890,10 +2890,10 @@ TextureImporter:
       name: map_38
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 500
-        height: 500
+        x: 1250
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2911,10 +2911,10 @@ TextureImporter:
       name: map_39
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 1000
-        width: 500
-        height: 500
+        x: 1875
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2932,10 +2932,10 @@ TextureImporter:
       name: map_40
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 1000
-        width: 500
-        height: 500
+        x: 2500
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2953,10 +2953,10 @@ TextureImporter:
       name: map_41
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 1000
-        width: 500
-        height: 500
+        x: 3125
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2974,10 +2974,10 @@ TextureImporter:
       name: map_42
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 1000
-        width: 500
-        height: 500
+        x: 3750
+        y: 1250
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2996,9 +2996,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 500
-        width: 500
-        height: 500
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3016,10 +3016,10 @@ TextureImporter:
       name: map_44
       rect:
         serializedVersion: 2
-        x: 500
-        y: 500
-        width: 500
-        height: 500
+        x: 625
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3037,10 +3037,10 @@ TextureImporter:
       name: map_45
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 500
-        width: 500
-        height: 500
+        x: 1250
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3058,10 +3058,10 @@ TextureImporter:
       name: map_46
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 500
-        width: 500
-        height: 500
+        x: 1875
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3079,10 +3079,10 @@ TextureImporter:
       name: map_47
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 500
-        width: 500
-        height: 500
+        x: 2500
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3100,10 +3100,10 @@ TextureImporter:
       name: map_48
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 500
-        width: 500
-        height: 500
+        x: 3125
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3121,10 +3121,10 @@ TextureImporter:
       name: map_49
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 500
-        width: 500
-        height: 500
+        x: 3750
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3142,10 +3142,10 @@ TextureImporter:
       name: map_50
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 500
-        width: 500
-        height: 500
+        x: 4375
+        y: 625
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3165,8 +3165,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3184,10 +3184,10 @@ TextureImporter:
       name: map_52
       rect:
         serializedVersion: 2
-        x: 500
+        x: 625
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3205,10 +3205,10 @@ TextureImporter:
       name: map_53
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 1250
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3226,10 +3226,10 @@ TextureImporter:
       name: map_54
       rect:
         serializedVersion: 2
-        x: 1500
+        x: 1875
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3247,10 +3247,10 @@ TextureImporter:
       name: map_55
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 2500
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3268,10 +3268,10 @@ TextureImporter:
       name: map_56
       rect:
         serializedVersion: 2
-        x: 2500
+        x: 3125
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3289,10 +3289,10 @@ TextureImporter:
       name: map_57
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 3750
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3310,10 +3310,10 @@ TextureImporter:
       name: map_58
       rect:
         serializedVersion: 2
-        x: 3500
+        x: 4375
         y: 0
-        width: 500
-        height: 500
+        width: 625
+        height: 625
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
