@@ -76,7 +76,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Sprite: {fileID: -3026049625232028608, guid: bd332c80842c4bf4ebbcd098a749b127, type: 3}
+=======
+  m_Sprite: {fileID: 2566702406196830629, guid: bd332c80842c4bf4ebbcd098a749b127, type: 3}
+>>>>>>> c5f812b13a0b1eead1959c010645154d4dea1c7d
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,6 +91,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
+=======
+--- !u!61 &7587914354691760652
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587914354691760658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6800001, y: 2.0001953}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+>>>>>>> c5f812b13a0b1eead1959c010645154d4dea1c7d
 --- !u!50 &7587914354691760649
 Rigidbody2D:
   serializedVersion: 4
@@ -163,7 +196,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7587914355150092587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.069000065, y: -1.22, z: 0}
+=======
+  m_LocalPosition: {x: 0.353, y: -1, z: 0}
+>>>>>>> c5f812b13a0b1eead1959c010645154d4dea1c7d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7587914354691760654}
@@ -193,7 +230,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7587914355986643321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.64, y: -1.22, z: 0}
+=======
+  m_LocalPosition: {x: -0.356, y: -1, z: 0}
+>>>>>>> c5f812b13a0b1eead1959c010645154d4dea1c7d
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7587914354691760654}
