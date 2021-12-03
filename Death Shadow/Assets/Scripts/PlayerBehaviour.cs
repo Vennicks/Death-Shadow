@@ -1,20 +1,46 @@
 using System;
+using System.Collections;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+public struct TAGS
+{
+    public static string PLATFORM = "Platform";
+    public static string ENEMY = "Enemy";
+    public static string SOUL = "Soul";
+    public static string PLAYER = "Player";
+}
+
 public class PlayerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame 
+    //Input manager
     private InputActions playerInputActions;
+
+    //Component of the player
     private Rigidbody2D rb2d;
-
+    private Transform GroundCheckRight;
+    private Transform GroundCheckLeft;
     private Collider2D hitbox;
-
+    
+    //Physic of the player
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpForce = 150f;
     [SerializeField] private int NbMaxJump = 2;
+
+    //platform to spawn
+    [SerializeField] private GameObject Platform;
+    [SerializeField] private Vector2 OffsetSpawnPlatform;
+
+
+    //Handling duration and cool down of abilities
+    [SerializeField] private float DurationFA;
+    [SerializeField] private float CooldownFA;
+    [SerializeField] private float CooldownSA;
+    private bool OnCooldownFA = false;
+    private bool OnCooldownSA = false;
 
     private int countJump = 0;
     private bool isJumping = false;
@@ -22,10 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
-    int TotalDamages = 0;
-
-    private Transform GroundCheckRight;
-    private Transform GroundCheckLeft;
+    
 
     void Start()
     {
@@ -56,7 +79,9 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (floatMoveAction < 0)
         {
+            Vector3 current_pos = transform.position;
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.position = current_pos;
         }
         else if (floatMoveAction > 0)
         {
@@ -90,7 +115,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void TakeDamages()
     {
-        TotalDamages++;
+        Debug.Log("DEATH");
     }
 
     void Walking(InputAction.CallbackContext ctx)
@@ -117,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
     
     private void Grounded(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == TAGS.PLATFORM)
         {
             countJump = 0;
             isJumping = false;
@@ -127,9 +152,18 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject obj = collision.gameObject;
-        if (obj.tag == "Ennemy")
+        if (obj.tag == TAGS.ENEMY)
         {
             TakeDamages();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject obj = collision.gameObject;
+        if (obj.tag == TAGS.SOUL)
+        {
+            obj.GetComponent<CollectibleBehaviour>().DefineTarget(this.gameObject);
         }
     }
 
@@ -140,19 +174,43 @@ public class PlayerBehaviour : MonoBehaviour
 
     private async Task delayedWork()
     {
-        await Task.Delay(5000);
+        await Task.Delay((int)DurationFA * 1000);
         gameObject.layer = 6;
     }
 
     private void UseFirstAbility()
     {
-        Debug.Log("Using First Ability");
+        if (OnCooldownFA)
+            return;
         gameObject.layer = 8;
         delayedWork();
+        StartCoroutine(CoolingDownFA());
+        OnCooldownFA = true;
+    }
+
+    private IEnumerator CoolingDownFA()
+    {
+        yield return new WaitForSeconds(CooldownFA);
+        OnCooldownFA = false;
     }
 
     private void UseSecondAbility()
     {
-        Debug.Log("Using Second Ability");
+        if (OnCooldownSA)
+            return;
+        if (transform.localRotation.eulerAngles.y > 0)
+            Instantiate(Platform, transform.position + new Vector3(-OffsetSpawnPlatform.x, OffsetSpawnPlatform.y),
+                Quaternion.identity);
+        else
+            Instantiate(Platform, transform.position + new Vector3(OffsetSpawnPlatform.x, OffsetSpawnPlatform.y),
+                Quaternion.identity);
+        StartCoroutine(CoolingDownSA());
+        OnCooldownSA = true;
+    }
+
+    private IEnumerator CoolingDownSA()
+    {
+        yield return new WaitForSeconds(CooldownSA);
+        OnCooldownSA = false;
     }
 }
