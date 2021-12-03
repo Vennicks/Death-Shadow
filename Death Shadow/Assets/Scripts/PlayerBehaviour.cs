@@ -11,26 +11,36 @@ public struct TAGS
     public static string PLATFORM = "Platform";
     public static string ENEMY = "Enemy";
     public static string SOUL = "Soul";
+    public static string PLAYER = "Player";
 }
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame 
+    //Input manager
     private InputActions playerInputActions;
 
+    //Component of the player
     private Rigidbody2D rb2d;
     private Transform GroundCheckRight;
     private Transform GroundCheckLeft;
     private Collider2D hitbox;
-
+    
+    //Physic of the player
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpForce = 150f;
     [SerializeField] private int NbMaxJump = 2;
+
+    //platform to spawn
     [SerializeField] private GameObject Platform;
     [SerializeField] private Vector2 OffsetSpawnPlatform;
+
+
+    //Handling duration and cool down of abilities
     [SerializeField] private float DurationFA;
     [SerializeField] private float CooldownFA;
     [SerializeField] private float CooldownSA;
+    private bool OnCooldownFA = false;
+    private bool OnCooldownSA = false;
 
     private int countJump = 0;
     private bool isJumping = false;
@@ -38,10 +48,7 @@ public class PlayerBehaviour : MonoBehaviour
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
-    private bool OnCooldownFA = false;
-    private bool OnCooldownSA = false;
-
-    private int TotalDamages = 0;
+    
 
     void Start()
     {
@@ -72,7 +79,9 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (floatMoveAction < 0)
         {
+            Vector3 current_pos = transform.position;
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.position = current_pos;
         }
         else if (floatMoveAction > 0)
         {
@@ -106,7 +115,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void TakeDamages()
     {
-        TotalDamages++;
+        Debug.Log("DEATH");
     }
 
     void Walking(InputAction.CallbackContext ctx)
@@ -189,7 +198,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (OnCooldownSA)
             return;
-        if (transform.localRotation.y > 0)
+        if (transform.localRotation.eulerAngles.y > 0)
             Instantiate(Platform, transform.position + new Vector3(-OffsetSpawnPlatform.x, OffsetSpawnPlatform.y),
                 Quaternion.identity);
         else
