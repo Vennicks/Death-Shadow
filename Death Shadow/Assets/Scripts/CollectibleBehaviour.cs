@@ -30,10 +30,13 @@ public class CollectibleBehaviour : MonoBehaviour
         targetToFollow = target;
     }
 
-    void OnCollisionEnter2D(Collision2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        Destroy(this.gameObject);
-        Destroy(this);
+        GameObject obj = collider.gameObject;
+        if (obj.gameObject.tag == TAGS.PLAYER)
+        {
+            Destroy(this.gameObject);
+            Destroy(this);
+        }
     }
-
 }
