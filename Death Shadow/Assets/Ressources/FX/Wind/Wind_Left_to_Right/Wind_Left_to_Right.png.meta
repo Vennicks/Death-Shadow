@@ -1,43 +1,55 @@
 fileFormatVersion: 2
-guid: 0c4166e20a337874d8d4baffd90bc19b
+guid: fb4951894219c414e841e5d47819325c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8539412949874038169
-    second: Vague_0
+      213: 4048223566280337835
+    second: Vent 1_0
   - first:
-      213: -2154825396612184147
-    second: Vague_1
+      213: 6361301519238259040
+    second: Vent 1_1
   - first:
-      213: -1111623709989959365
-    second: Vague_2
+      213: 6086194896787023897
+    second: Vent 1_2
   - first:
-      213: 1716054166657307978
-    second: Vague_3
+      213: -6704249188089248562
+    second: Vent 1_3
   - first:
-      213: -4371631631619383610
-    second: Vague_4
+      213: -2166949793415222066
+    second: Vent 1_4
   - first:
-      213: -4336151777104779367
-    second: Vague_5
+      213: -4429585788754070911
+    second: Vent 1_5
   - first:
-      213: -5597217523848346740
-    second: Vague_6
+      213: 6619352133543122826
+    second: Vent 1_6
   - first:
-      213: 4879418084425977541
-    second: Vague_7
+      213: 5857106132830580275
+    second: Vent 1_7
   - first:
-      213: 5595421444207835353
-    second: Vague_8
+      213: 2720956495267515223
+    second: Vent 1_8
   - first:
-      213: -6700580038087024181
-    second: Vague_9
+      213: 1010422750826535671
+    second: Vent 1_9
   - first:
-      213: -7268532205689413491
-    second: Vague_10
+      213: 6534783529165820835
+    second: Vent 1_10
   - first:
-      213: -5820807824630917723
-    second: Vague_11
+      213: -4385662906509717455
+    second: Vent 1_11
+  - first:
+      213: -7340782945631186160
+    second: Vent 1_12
+  - first:
+      213: 4971172279616022978
+    second: Vent 1_13
+  - first:
+      213: 2701331999947415979
+    second: Vent 1_14
+  - first:
+      213: 5969221624587040960
+    second: Vent 1_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vague_0
+      name: Vent 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1440
-        width: 640
-        height: 480
+        y: 810
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 995dc9b85d6128670800000000000000
-      internalID: 8539412949874038169
+      spriteID: ba9218792ed2e2830800000000000000
+      internalID: 4048223566280337835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_1
+      name: Vent 1_1
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1440
-        width: 640
-        height: 480
+        x: 480
+        y: 810
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da7c0f1f7b58812e0800000000000000
-      internalID: -2154825396612184147
+      spriteID: 06169533702e74850800000000000000
+      internalID: 6361301519238259040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_2
+      name: Vent 1_2
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 1440
-        width: 640
-        height: 480
+        x: 960
+        y: 810
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b39852a1028b290f0800000000000000
-      internalID: -1111623709989959365
+      spriteID: 91829c83302867450800000000000000
+      internalID: 6086194896787023897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_3
+      name: Vent 1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 640
-        height: 480
+        x: 1440
+        y: 810
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,62 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4510fa2c26a0d710800000000000000
-      internalID: 1716054166657307978
+      spriteID: ec44d3252e8b5f2a0800000000000000
+      internalID: -6704249188089248562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_4
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 960
-        width: 640
-        height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ce17746138d453c0800000000000000
-      internalID: -4371631631619383610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vague_5
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 960
-        width: 640
-        height: 480
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997ad71cee4e2d3c0800000000000000
-      internalID: -4336151777104779367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vague_6
+      name: Vent 1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
-        width: 640
-        height: 480
+        y: 540
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c838d604150b252b0800000000000000
-      internalID: -5597217523848346740
+      spriteID: ecc2165d4a27de1e0800000000000000
+      internalID: -2166949793415222066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_7
+      name: Vent 1_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 480
-        width: 640
-        height: 480
+        x: 480
+        y: 540
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cec3d045ec27b340800000000000000
-      internalID: 4879418084425977541
+      spriteID: 182f13fa133f682c0800000000000000
+      internalID: -4429585788754070911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_8
+      name: Vent 1_6
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 480
-        width: 640
-        height: 480
+        x: 960
+        y: 540
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,20 +279,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d87c9e582ee6ad40800000000000000
-      internalID: 5595421444207835353
+      spriteID: a87df03d1b9acdb50800000000000000
+      internalID: 6619352133543122826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_9
+      name: Vent 1_7
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 540
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ee02bdefe984150800000000000000
+      internalID: 5857106132830580275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b46b52487c2c520800000000000000
+      internalID: 2720956495267515223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 270
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa1dff632eb50e00800000000000000
+      internalID: 1010422750826535671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 270
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3900c3ff630ba50800000000000000
+      internalID: 6534783529165820835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 270
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13091e0a2def223c0800000000000000
+      internalID: -4385662906509717455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 640
-        height: 480
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1efb0e4f1c203a0800000000000000
-      internalID: -6700580038087024181
+      spriteID: 0135868ddcc402a90800000000000000
+      internalID: -7340782945631186160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_10
+      name: Vent 1_13
       rect:
         serializedVersion: 2
-        x: 640
+        x: 480
         y: 0
-        width: 640
-        height: 480
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d806561287cf02b90800000000000000
-      internalID: -7268532205689413491
+      spriteID: 2c928c399d62df440800000000000000
+      internalID: 4971172279616022978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vague_11
+      name: Vent 1_14
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 960
         y: 0
-        width: 640
-        height: 480
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,8 +447,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a55f0b9f16583fa0800000000000000
-      internalID: -5820807824630917723
+      spriteID: ba1e245442f0d7520800000000000000
+      internalID: 2701331999947415979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vent 1_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 480
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c83717f07fe6d250800000000000000
+      internalID: 5969221624587040960
       vertices: []
       indices: 
       edges: []
