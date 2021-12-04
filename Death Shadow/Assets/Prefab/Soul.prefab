@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  particleDeath: {fileID: 8620754582934040181, guid: 01fbb9c1d2867964692b572da5480e86, type: 3}
 --- !u!61 &7988663401426448601
 BoxCollider2D:
   m_ObjectHideFlags: 0

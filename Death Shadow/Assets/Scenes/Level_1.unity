@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 241.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1102054603332411363, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
 --- !u!4 &33975816 stripped
 Transform:
@@ -2826,7 +2827,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1591930378}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a3338228010bd54428ae8e0e70c7a96f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

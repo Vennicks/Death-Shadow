@@ -9,6 +9,7 @@ public class CollectibleBehaviour : MonoBehaviour
     [SerializeField] public float Speed = 10f;
 
     private GameObject targetToFollow;
+    [SerializeField]  private GameObject particleDeath;
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class CollectibleBehaviour : MonoBehaviour
         GameObject obj = collider.gameObject;
         if (obj.gameObject.tag == TAGS.PLAYER)
         {
+            Instantiate(particleDeath, this.transform.position, transform.localRotation);
             Destroy(this.gameObject);
             Destroy(this);
         }
