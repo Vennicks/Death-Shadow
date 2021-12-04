@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 2780ad178285dea4abbb1c74154bae09
+guid: f50d253bfd61d2749aee6186a8452ee7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -960191770513030683
-    second: Vent revert_0
+      213: 8829877476116926503
+    second: Vent_0
   - first:
-      213: -8078396280026551570
-    second: Vent revert_1
+      213: 6766086637672019885
+    second: Vent_1
   - first:
-      213: 1078083617087226530
-    second: Vent revert_2
+      213: -3701139553528684467
+    second: Vent_2
   - first:
-      213: -5056164424628413693
-    second: Vent revert_3
+      213: 3058283660116347370
+    second: Vent_3
   - first:
-      213: -1257248785940655986
-    second: Vent revert_4
+      213: -4326069729583068354
+    second: Vent_4
   - first:
-      213: -938875429730396578
-    second: Vent revert_5
+      213: -8146699563911690215
+    second: Vent_5
   - first:
-      213: 8223244297544279880
-    second: Vent revert_6
+      213: -7656211489129267516
+    second: Vent_6
   - first:
-      213: 2066424609416688328
-    second: Vent revert_7
+      213: 8031835850302956184
+    second: Vent_7
   - first:
-      213: -6004224583440251956
-    second: Vent revert_8
+      213: -4530515923010391527
+    second: Vent_8
   - first:
-      213: -3765991332795970964
-    second: Vent revert_9
+      213: 6443084317093916861
+    second: Vent_9
   - first:
-      213: -1763190055434323683
-    second: Vent revert_10
+      213: -417323521810881744
+    second: Vent_10
   - first:
-      213: 2974463627881753745
-    second: Vent revert_11
+      213: 4521689566034730737
+    second: Vent_11
   - first:
-      213: 1672145776659957834
-    second: Vent revert_12
+      213: 1653516478590786918
+    second: Vent_12
   - first:
-      213: -8997073714350250115
-    second: Vent revert_13
+      213: 1121501353928701712
+    second: Vent_13
   - first:
-      213: 1152192314050505308
-    second: Vent revert_14
+      213: 1413161556142246924
+    second: Vent_14
   - first:
-      213: -3774231822158184290
-    second: Vent revert_15
+      213: 8983782934039306334
+    second: Vent_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vent revert_0
+      name: Vent_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e1415a0ca6bca2f0800000000000000
-      internalID: -960191770513030683
+      spriteID: 7201c2628c60a8a70800000000000000
+      internalID: 8829877476116926503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_1
+      name: Vent_1
       rect:
         serializedVersion: 2
         x: 480
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eea2e2e6265c3ef80800000000000000
-      internalID: -8078396280026551570
+      spriteID: da735fdd2f7f5ed50800000000000000
+      internalID: 6766086637672019885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_2
+      name: Vent_2
       rect:
         serializedVersion: 2
         x: 960
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a207aa765f16fe00800000000000000
-      internalID: 1078083617087226530
+      spriteID: d4066cf7f29e2acc0800000000000000
+      internalID: -3701139553528684467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_3
+      name: Vent_3
       rect:
         serializedVersion: 2
         x: 1440
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30b5e089e35e4d9b0800000000000000
-      internalID: -5056164424628413693
+      spriteID: ae9cd9f09c4317a20800000000000000
+      internalID: 3058283660116347370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_4
+      name: Vent_4
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8057bfe3ea5d8ee0800000000000000
-      internalID: -1257248785940655986
+      spriteID: e3b81ae5086b6f3c0800000000000000
+      internalID: -4326069729583068354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_5
+      name: Vent_5
       rect:
         serializedVersion: 2
         x: 480
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56d39265c178f2f0800000000000000
-      internalID: -938875429730396578
+      spriteID: 918c631e8eb11fe80800000000000000
+      internalID: -8146699563911690215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_6
+      name: Vent_6
       rect:
         serializedVersion: 2
         x: 960
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8472268be15de1270800000000000000
-      internalID: 8223244297544279880
+      spriteID: 4ce7f29073cafb590800000000000000
+      internalID: -7656211489129267516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_7
+      name: Vent_7
       rect:
         serializedVersion: 2
         x: 1440
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c2386fdb3a6dac10800000000000000
-      internalID: 2066424609416688328
+      spriteID: 8922e8fb620d67f60800000000000000
+      internalID: 8031835850302956184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_8
+      name: Vent_8
       rect:
         serializedVersion: 2
         x: 0
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc340689d85bcaca0800000000000000
-      internalID: -6004224583440251956
+      spriteID: 912f6bf85cf5021c0800000000000000
+      internalID: -4530515923010391527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_9
+      name: Vent_9
       rect:
         serializedVersion: 2
         x: 480
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a0f7df5d28cbbc0800000000000000
-      internalID: -3765991332795970964
+      spriteID: db0f54aac0f6a6950800000000000000
+      internalID: 6443084317093916861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_10
+      name: Vent_10
       rect:
         serializedVersion: 2
         x: 960
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d19f5528cf3e787e0800000000000000
-      internalID: -1763190055434323683
+      spriteID: 0332c0ec77e553af0800000000000000
+      internalID: -417323521810881744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_11
+      name: Vent_11
       rect:
         serializedVersion: 2
         x: 1440
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19c263109ea674920800000000000000
-      internalID: 2974463627881753745
+      spriteID: 1fe171014b440ce30800000000000000
+      internalID: 4521689566034730737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_12
+      name: Vent_12
       rect:
         serializedVersion: 2
         x: 0
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a488c7679b7a43710800000000000000
-      internalID: 1672145776659957834
+      spriteID: 66d98a00a7872f610800000000000000
+      internalID: 1653516478590786918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_13
+      name: Vent_13
       rect:
         serializedVersion: 2
         x: 480
@@ -426,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7726261029f32380800000000000000
-      internalID: -8997073714350250115
+      spriteID: 0173a081a8f509f00800000000000000
+      internalID: 1121501353928701712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_14
+      name: Vent_14
       rect:
         serializedVersion: 2
         x: 960
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5a6ae71ec86dff00800000000000000
-      internalID: 1152192314050505308
+      spriteID: c0cc814b2fe8c9310800000000000000
+      internalID: 1413161556142246924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vent revert_15
+      name: Vent_15
       rect:
         serializedVersion: 2
         x: 1440
@@ -468,8 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e90494c872c3f9bc0800000000000000
-      internalID: -3774231822158184290
+      spriteID: e5021aafafeccac70800000000000000
+      internalID: 8983782934039306334
       vertices: []
       indices: 
       edges: []
