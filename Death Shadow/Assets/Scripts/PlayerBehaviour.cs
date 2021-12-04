@@ -24,7 +24,9 @@ public class PlayerBehaviour : MonoBehaviour
     private Transform GroundCheckRight;
     private Transform GroundCheckLeft;
     private Collider2D hitbox;
-    
+
+    private Animator animator;
+
     //Physic of the player
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpForce = 150f;
@@ -54,6 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         playerInputActions = new InputActions();
+        animator = gameObject.GetComponent<Animator>();
 
         playerInputActions.PlayerInput.Jump.started += (ctx) => Jumping();
         playerInputActions.PlayerInput.Jump.canceled += (ctx) => UnlockJumping();
@@ -92,6 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
         }
+        animator.SetFloat("speed", Math.Abs(floatMoveAction));
     }
 
     private void FixedUpdate()
@@ -128,6 +132,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (!isJumping)
         {
             countJump++;
+            animator.SetInteger("JumpState", countJump);
             floatJumpAction = 0.2f;
         }
     }
@@ -145,7 +150,13 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.tag == TAGS.PLATFORM)
         {
             countJump = 0;
+            animator.SetInteger("JumpState", countJump);
+            animator.SetBool("Grounded", true);
             isJumping = false;
+        }
+        else
+        {
+            animator.SetBool("Grounded", false);
         }
     }
 
@@ -175,6 +186,7 @@ public class PlayerBehaviour : MonoBehaviour
     private async Task delayedWork()
     {
         await Task.Delay((int)DurationFA * 1000);
+        animator.SetBool("InShadow", false);
         gameObject.layer = 6;
     }
 
@@ -184,6 +196,7 @@ public class PlayerBehaviour : MonoBehaviour
             return;
         gameObject.layer = 8;
         delayedWork();
+        animator.SetBool("InShadow", true);
         StartCoroutine(CoolingDownFA());
         OnCooldownFA = true;
     }
