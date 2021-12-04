@@ -346,27 +346,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28eae94753c0594ab0042f2264ec185, type: 3}
---- !u!1 &1563561935 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1102054603332411389, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
-  m_PrefabInstance: {fileID: 1102054604889411634}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1563561936
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563561935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 3
 --- !u!4 &1563561939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
@@ -556,11 +535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 1102054603332411361, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -610,6 +589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1102054604585075863, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.714
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af64d01fa188d84e9b2477e875b0c2e, type: 3}
 --- !u!1001 &6689712563765307841
@@ -633,11 +616,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689712565237579038, guid: d0652db938b6d164a8309594a0f889d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.077
       objectReference: {fileID: 0}
     - target: {fileID: 6689712565237579038, guid: d0652db938b6d164a8309594a0f889d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.549
       objectReference: {fileID: 0}
     - target: {fileID: 6689712565237579038, guid: d0652db938b6d164a8309594a0f889d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -727,6 +710,10 @@ PrefabInstance:
     - target: {fileID: 7988663401426448602, guid: e28eae94753c0594ab0042f2264ec185, type: 3}
       propertyPath: m_Name
       value: Soul
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988663401426448606, guid: e28eae94753c0594ab0042f2264ec185, type: 3}
+      propertyPath: Speed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28eae94753c0594ab0042f2264ec185, type: 3}
