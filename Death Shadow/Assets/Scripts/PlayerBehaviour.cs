@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +20,7 @@ public class PlayerBehaviour : MonoBehaviour
     //Input manager
     private InputActions playerInputActions;
 
+    private int total_souls = 0;
     //Component of the player
     private Rigidbody2D rb2d;
     private Transform GroundCheckRight;
@@ -62,8 +64,8 @@ public class PlayerBehaviour : MonoBehaviour
         playerInputActions.PlayerInput.Jump.canceled += (ctx) => UnlockJumping();
         playerInputActions.PlayerInput.Jump.Enable();
 
-        playerInputActions.PlayerInput.Movement.performed += Walking;
-        playerInputActions.PlayerInput.Movement.canceled += Walking;
+        playerInputActions.PlayerInput.Movement.performed += (ctx) => { floatMoveAction = ctx.ReadValue<float>(); };
+        playerInputActions.PlayerInput.Movement.canceled += (ctx) => { floatMoveAction = ctx.ReadValue<float>(); };
         playerInputActions.PlayerInput.Movement.Enable();
 
         playerInputActions.PlayerInput.Ability1.started += (ctx) => UseFirstAbility();
@@ -80,6 +82,15 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < -15)
+        {
+            OutOfRange();
+        }
+        animator.SetFloat("speed", Math.Abs(floatMoveAction));
+    }
+
+    private void FixedUpdate()
+    {
         if (floatMoveAction < 0)
         {
             Vector3 current_pos = transform.position;
@@ -95,11 +106,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
         }
-        animator.SetFloat("speed", Math.Abs(floatMoveAction));
-    }
 
-    private void FixedUpdate()
-    {
         if (floatJumpAction > 0.1f)
         {
             isJumping = true;
@@ -110,23 +117,46 @@ public class PlayerBehaviour : MonoBehaviour
         checkIfGrounded();
     }
 
-    void checkIfGrounded()
-    {
-        var collider = Physics2D.OverlapArea(GroundCheckLeft.position, GroundCheckRight.position);
-        if (collider)
-            Grounded(collider);
-    }
-
     void TakeDamages()
     {
         Debug.Log("DEATH");
     }
 
-    void Walking(InputAction.CallbackContext ctx)
+    void OutOfRange()
     {
-        floatMoveAction = ctx.ReadValue<float>();
+        Debug.Log("out of range (falling)");
     }
 
+        //Increment the score when a soul has been catched
+    public void IncrementScore()
+    {
+        GameObject canvaObject = GameObject.Find("Canva");
+        TextMeshProUGUI canvas = canvaObject.GetComponent<TextMeshProUGUI>();
+        total_souls += 1;
+        canvas.text = "Total souls collected: " + total_souls;
+    }
+
+    //----------- HANDLING JUMP -----------------------------------------------------------
+    //Check if the player is on the ground
+    void checkIfGrounded()
+    {
+        var collider = Physics2D.OverlapArea(GroundCheckLeft.position, GroundCheckRight.position);
+        if (collider)
+        {
+            if (collider.gameObject.tag == TAGS.PLATFORM)
+            {
+                countJump = 0;
+                animator.SetInteger("JumpState", countJump);
+                animator.SetBool("Grounded", true);
+                isJumping = false;
+            }
+            else
+            {
+                animator.SetBool("Grounded", false);
+            }
+        }
+    }
+        //perform a jump
     void Jumping()
     {
         if (!isJumping)
@@ -137,6 +167,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+        //unlock jumping if it can jump again
     void UnlockJumping()
     {
         if (isJumping && countJump < NbMaxJump-1)
@@ -145,21 +176,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
     
-    private void Grounded(Collider2D collision)
-    {
-        if (collision.gameObject.tag == TAGS.PLATFORM)
-        {
-            countJump = 0;
-            animator.SetInteger("JumpState", countJump);
-            animator.SetBool("Grounded", true);
-            isJumping = false;
-        }
-        else
-        {
-            animator.SetBool("Grounded", false);
-        }
-    }
+    //----------------------- HANDLE COLLISIONS--------------------------------------------
 
+        //Check if collide with enemy
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject obj = collision.gameObject;
@@ -169,6 +188,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
+        //Check if collectible entered in the area
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject obj = collision.gameObject;
@@ -177,19 +197,18 @@ public class PlayerBehaviour : MonoBehaviour
             obj.GetComponent<CollectibleBehaviour>().DefineTarget(this.gameObject);
         }
     }
+    
+    //---------------- HANDLING ABILITY-----------------
 
-    private static void StopAbility1(GameObject o)
-    {
-        o.layer = 6;
-    }
-
-    private async Task delayedWork()
+        //put the player out of the shadow
+        private async Task delayedWork()
     {
         await Task.Delay((int)DurationFA * 1000);
         animator.SetBool("InShadow", false);
         gameObject.layer = 6;
     }
 
+        //Use the first ability
     private void UseFirstAbility()
     {
         if (OnCooldownFA)
@@ -201,12 +220,14 @@ public class PlayerBehaviour : MonoBehaviour
         OnCooldownFA = true;
     }
 
+        //handle the end of the cooldown of the first ability
     private IEnumerator CoolingDownFA()
     {
         yield return new WaitForSeconds(CooldownFA);
         OnCooldownFA = false;
     }
 
+    //Use the second ability
     private void UseSecondAbility()
     {
         if (OnCooldownSA)
@@ -221,6 +242,7 @@ public class PlayerBehaviour : MonoBehaviour
         OnCooldownSA = true;
     }
 
+        //handle the end of the cooldown of the Second ability
     private IEnumerator CoolingDownSA()
     {
         yield return new WaitForSeconds(CooldownSA);

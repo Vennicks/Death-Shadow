@@ -36,6 +36,7 @@ public class CollectibleBehaviour : MonoBehaviour
         GameObject obj = collider.gameObject;
         if (obj.gameObject.tag == TAGS.PLAYER)
         {
+            obj.GetComponent<PlayerBehaviour>().IncrementScore();
             Instantiate(particleDeath, this.transform.position, transform.localRotation);
             Destroy(this.gameObject);
             Destroy(this);
