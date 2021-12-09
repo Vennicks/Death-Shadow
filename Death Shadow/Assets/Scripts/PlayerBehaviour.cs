@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public struct TAGS
 {
@@ -83,9 +84,11 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         if (transform.position.y < -15)
-        {
             OutOfRange();
-        }
+
+        if (transform.position.x >= 307)
+            WinZone();
+
         animator.SetFloat("speed", Math.Abs(floatMoveAction));
     }
 
@@ -119,12 +122,17 @@ public class PlayerBehaviour : MonoBehaviour
 
     void TakeDamages()
     {
-        Debug.Log("DEATH");
+        SceneManager.LoadScene("Scenes/Menu/LoseScreen");
     }
 
     void OutOfRange()
     {
-        Debug.Log("out of range (falling)");
+        SceneManager.LoadScene("Scenes/Menu/LoseScreen");
+    }
+
+    void WinZone()
+    {
+        SceneManager.LoadScene("Scenes/Menu/VictoryScreen");
     }
 
         //Increment the score when a soul has been catched
