@@ -2,13 +2,37 @@
     "name": "InputActions",
     "maps": [
         {
-            "name": "Character Input",
+            "name": "PlayerInput",
             "id": "cfda4fc3-d2e9-4a12-9b3b-538a5ea9d5e9",
             "actions": [
                 {
-                    "name": "MovementX",
+                    "name": "Movement",
                     "type": "Button",
                     "id": "3951e7cf-c834-4e22-b079-d0a295e039be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "44fd04c8-2816-495f-aab1-061f6ce3cdf1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Ability1",
+                    "type": "Button",
+                    "id": "e648981b-8b03-43ba-9b94-e845bfb05f8c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Ability2",
+                    "type": "Button",
+                    "id": "25df4cb2-2cc3-4f83-ad1e-d7a442a8926d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -16,37 +40,70 @@
             ],
             "bindings": [
                 {
-                    "name": "Keys",
+                    "name": "qwerty",
                     "id": "b8ffb4e9-a391-4cf1-b6b2-ae62ca6c7ca8",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MovementX",
+                    "action": "Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
                     "id": "21272e58-89cd-4519-a0c5-f1e24ed8f6dc",
-                    "path": "",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MovementX",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
                     "id": "2c0ce34e-4205-4a28-9fc2-74cb504a729a",
-                    "path": "",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MovementX",
+                    "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2bf9a0b8-c633-4d77-b8b2-96032482006a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f794a337-40cc-47b3-9fe6-23dee80207e8",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ability1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc173e8a-ab03-467a-b441-e2505316e7ee",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ability2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
