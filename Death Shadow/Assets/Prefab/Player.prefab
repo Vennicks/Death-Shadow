@@ -129,6 +129,7 @@ MonoBehaviour:
   DurationFA: 5
   CooldownFA: 2
   CooldownSA: 2
+  particleDeath: {fileID: 6143079382618106215, guid: 3ab05da11cb6aed4a8dc40c9f8681b64, type: 3}
 --- !u!95 &2321140590664879440
 Animator:
   serializedVersion: 3

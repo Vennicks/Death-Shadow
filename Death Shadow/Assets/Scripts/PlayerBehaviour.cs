@@ -42,6 +42,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float DurationFA;
     [SerializeField] private float CooldownFA;
     [SerializeField] private float CooldownSA;
+
+    [SerializeField] private GameObject particleDeath;
+
     private bool OnCooldownFA = false;
     private bool OnCooldownSA = false;
 
@@ -51,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
-    
+    private bool grounded = false;
 
     void Start()
     {
@@ -86,7 +89,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (floatJumpAction > 0.1f)
         {
-            isJumping = true;
             rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
             floatJumpAction = 0f;
         }
@@ -143,13 +145,14 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (state)
         {
-                countJump = 0;
-                animator.SetInteger("JumpState", countJump);
-                animator.SetBool("Grounded", true);
-                isJumping = false;
-        }
-        else
+            grounded = true;
+            countJump = 0;
+            animator.SetInteger("JumpState", countJump);
+            animator.SetBool("Grounded", true);
+            isJumping = false;
+        } else
         {
+            grounded = false;
             animator.SetBool("Grounded", false);
         }
     }
@@ -158,6 +161,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (!isJumping)
         {
+            isJumping = true;
             countJump++;
             animator.SetInteger("JumpState", countJump);
             floatJumpAction = 0.2f;
@@ -201,6 +205,9 @@ public class PlayerBehaviour : MonoBehaviour
         private async Task delayedWork()
     {
         await Task.Delay((int)DurationFA * 1000);
+
+        GameObject shadow = GameObject.Find("Shadow particle(Clone)");
+        Destroy(shadow);
         animator.SetBool("InShadow", false);
         gameObject.layer = 6;
     }
@@ -208,8 +215,11 @@ public class PlayerBehaviour : MonoBehaviour
         //Use the first ability
     private void UseFirstAbility()
     {
-        if (OnCooldownFA)
+        if (OnCooldownFA /*|| grounded == true*/)
             return;
+
+        GameObject shadow = Instantiate(particleDeath, this.transform.position + new Vector3(0, -1.01f), transform.localRotation,transform);
+
         gameObject.layer = 8;
         delayedWork();
         animator.SetBool("InShadow", true);
