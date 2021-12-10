@@ -89,6 +89,14 @@ public class PlayerBehaviour : MonoBehaviour
         if (transform.position.x >= 307)
             WinZone();
 
+        if (floatJumpAction > 0.1f)
+        {
+            isJumping = true;
+            rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
+            floatJumpAction = 0f;
+        }
+
+        checkIfGrounded();
         animator.SetFloat("speed", Math.Abs(floatMoveAction));
     }
 
@@ -107,17 +115,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (floatMoveAction > 0.1f || floatMoveAction < -0.1f)
         {
-            transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
+            //transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
+            rb2d.velocity += new Vector2(floatMoveAction * moveSpeed * Time.deltaTime, 0f);
         }
-
-        if (floatJumpAction > 0.1f)
-        {
-            isJumping = true;
-            rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
-            floatJumpAction = 0f;
-        }
-
-        checkIfGrounded();
     }
 
     void TakeDamages()

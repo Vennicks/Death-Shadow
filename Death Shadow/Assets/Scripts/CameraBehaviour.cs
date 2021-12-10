@@ -13,7 +13,10 @@ public class CameraBehaviour : MonoBehaviour
     void LateUpdate()
     {
         Vector3 desiredPosition = player.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime); ;
+        if (desiredPosition.y < -3.255f)
+            desiredPosition.y = -3.25f;
+
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
     }
 }
