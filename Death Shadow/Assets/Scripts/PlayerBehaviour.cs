@@ -54,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
-    private bool grounded = false;
+    private bool InShadow = false;
 
     void Start()
     {
@@ -145,21 +145,19 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (state)
         {
-            grounded = true;
             countJump = 0;
             animator.SetInteger("JumpState", countJump);
             animator.SetBool("Grounded", true);
             isJumping = false;
         } else
         {
-            grounded = false;
             animator.SetBool("Grounded", false);
         }
     }
         //perform a jump
     void Jumping()
     {
-        if (!isJumping)
+        if (!isJumping && InShadow == false)
         {
             isJumping = true;
             countJump++;
@@ -208,6 +206,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         GameObject shadow = GameObject.Find("Shadow particle(Clone)");
         Destroy(shadow);
+        InShadow = false;
         animator.SetBool("InShadow", false);
         gameObject.layer = 6;
     }
@@ -215,8 +214,10 @@ public class PlayerBehaviour : MonoBehaviour
         //Use the first ability
     private void UseFirstAbility()
     {
-        if (OnCooldownFA /*|| grounded == true*/)
+        if (OnCooldownFA)
             return;
+
+        InShadow = true;
 
         GameObject shadow = Instantiate(particleDeath, this.transform.position + new Vector3(0, -1.01f), transform.localRotation,transform);
 
