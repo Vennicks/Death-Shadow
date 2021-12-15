@@ -24,8 +24,6 @@ public class PlayerBehaviour : MonoBehaviour
     private int total_souls = 0;
     //Component of the player
     private Rigidbody2D rb2d;
-    private Transform GroundCheckRight;
-    private Transform GroundCheckLeft;
     private Collider2D hitbox;
 
     private Animator animator;
@@ -44,6 +42,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float DurationFA;
     [SerializeField] private float CooldownFA;
     [SerializeField] private float CooldownSA;
+
+    [SerializeField] private GameObject particleDeath;
+
     private bool OnCooldownFA = false;
     private bool OnCooldownSA = false;
 
@@ -53,7 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
     float floatMoveAction = 0;
     float floatJumpAction = 0;
 
-    
+    private bool InShadow = false;
 
     void Start()
     {
@@ -74,9 +75,6 @@ public class PlayerBehaviour : MonoBehaviour
         playerInputActions.PlayerInput.Ability2.started += (ctx) => UseSecondAbility();
         playerInputActions.PlayerInput.Ability2.Enable();
 
-        GroundCheckRight = transform.Find("GroundCheckRight");
-        GroundCheckLeft = transform.Find("GroundCheckLeft");
-
         hitbox = gameObject.GetComponent<Collider2D>();
     }
 
@@ -89,6 +87,11 @@ public class PlayerBehaviour : MonoBehaviour
         if (transform.position.x >= 307)
             WinZone();
 
+        if (floatJumpAction > 0.1f)
+        {
+            rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
+            floatJumpAction = 0f;
+        }
         animator.SetFloat("speed", Math.Abs(floatMoveAction));
     }
 
@@ -107,17 +110,9 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (floatMoveAction > 0.1f || floatMoveAction < -0.1f)
         {
-            transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
+            //transform.Translate(new Vector2(Math.Abs(floatMoveAction) * moveSpeed * Time.deltaTime, 0f));
+            rb2d.velocity += new Vector2(floatMoveAction * moveSpeed * Time.deltaTime, 0f);
         }
-
-        if (floatJumpAction > 0.1f)
-        {
-            isJumping = true;
-            rb2d.AddForce(new Vector2(0f, floatJumpAction * jumpForce), ForceMode2D.Impulse);
-            floatJumpAction = 0f;
-        }
-
-        checkIfGrounded();
     }
 
     void TakeDamages()
@@ -146,29 +141,25 @@ public class PlayerBehaviour : MonoBehaviour
 
     //----------- HANDLING JUMP -----------------------------------------------------------
     //Check if the player is on the ground
-    void checkIfGrounded()
+    public void checkIfGrounded(bool state)
     {
-        var collider = Physics2D.OverlapArea(GroundCheckLeft.position, GroundCheckRight.position);
-        if (collider)
+        if (state)
         {
-            if (collider.gameObject.tag == TAGS.PLATFORM)
-            {
-                countJump = 0;
-                animator.SetInteger("JumpState", countJump);
-                animator.SetBool("Grounded", true);
-                isJumping = false;
-            }
-            else
-            {
-                animator.SetBool("Grounded", false);
-            }
+            countJump = 0;
+            animator.SetInteger("JumpState", countJump);
+            animator.SetBool("Grounded", true);
+            isJumping = false;
+        } else
+        {
+            animator.SetBool("Grounded", false);
         }
     }
         //perform a jump
     void Jumping()
     {
-        if (!isJumping)
+        if (!isJumping && InShadow == false)
         {
+            isJumping = true;
             countJump++;
             animator.SetInteger("JumpState", countJump);
             floatJumpAction = 0.2f;
@@ -178,7 +169,7 @@ public class PlayerBehaviour : MonoBehaviour
         //unlock jumping if it can jump again
     void UnlockJumping()
     {
-        if (isJumping && countJump < NbMaxJump-1)
+        if (isJumping && countJump < NbMaxJump)
         {
             isJumping = false;
         }
@@ -212,6 +203,10 @@ public class PlayerBehaviour : MonoBehaviour
         private async Task delayedWork()
     {
         await Task.Delay((int)DurationFA * 1000);
+
+        GameObject shadow = GameObject.Find("Shadow particle(Clone)");
+        Destroy(shadow);
+        InShadow = false;
         animator.SetBool("InShadow", false);
         gameObject.layer = 6;
     }
@@ -221,6 +216,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (OnCooldownFA)
             return;
+
+        InShadow = true;
+
+        GameObject shadow = Instantiate(particleDeath, this.transform.position + new Vector3(0, -1.01f), transform.localRotation,transform);
+
         gameObject.layer = 8;
         delayedWork();
         animator.SetBool("InShadow", true);

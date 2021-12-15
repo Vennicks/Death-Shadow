@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7988663401426448606}
   - component: {fileID: 7988663401426448601}
   - component: {fileID: 6003744187331684759}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Soul
   m_TagString: Soul
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127e0b34e88f868428193101cb8939c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 6
   particleDeath: {fileID: 8620754582934040181, guid: 01fbb9c1d2867964692b572da5480e86, type: 3}
 --- !u!61 &7988663401426448601
 BoxCollider2D:
